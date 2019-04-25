@@ -8,6 +8,6 @@ export class DataserviceService {
   constructor(private http: HttpClient) { }
 
   getfact(name: string) {
-    return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${name}&APPID=ab2e39f34918cea0d3075fc21a9aba1c`, { responseType: 'text' })
+    return this.http.get(`https://api.openweathermap.org/data/2.5/forecast?q=${name}&APPID=ab2e39f34918cea0d3075fc21a9aba1c`, { responseType: 'text' })
   }
 }
