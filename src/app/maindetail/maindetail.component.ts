@@ -13,6 +13,7 @@ export class MaindetailComponent implements OnInit {
   @Input() childhumidity: number;
   @Input() childdescription: string;
   @Input() childwind: string;
+  @Input() childlocation: string;
   constructor() { }
 
   ngOnInit() {

@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'http-client';
   name: string;
   city: string;
+  curCity: string;
+  location: string;
   Temp: number;
   humidity: number;
   description: string;
@@ -29,6 +31,8 @@ export class AppComponent {
       this.humidity = object.list[1].main.humidity;
       this.description = object.list[1].weather[0].description;
       this.wind = object.list[1].wind.speed;
+      this.location = object.city.country;
+      this.curCity = object.city.name;
       this.result = [];
       for (let index = 1; index < 40; index = index + 6) {
         this.result.push(object.list[index]);

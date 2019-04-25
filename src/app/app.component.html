@@ -2,8 +2,8 @@
 <button (click)='getdata()'>get weather</button>
 
 
-<app-maindetail [childname]='name' [childcity]='city' [childtemp]='Temp' [childhumidity]='humidity'
-  [childdescription]='description' [childwind]='wind'></app-maindetail>
+<app-maindetail [childname]='name' [childcity]='curCity' [childlocation]='location' [childtemp]='Temp'
+  [childhumidity]='humidity' [childdescription]='description' [childwind]='wind'></app-maindetail>
 <div class="seven-day" *ngFor="let info of result">
   <app-daywisedetails [childday]='info.dt_txt' [childdescription]='info.weather[0].description'
     [tempmin]='info.main.temp_min' [tempmax]='info.main.temp_max' [humidity]='info.main.humidity'></app-daywisedetails>
